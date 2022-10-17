@@ -7,7 +7,7 @@ for line in corpus:
     line_nl_removed = line.replace("\n", " ")
     corpus_q3 += line_nl_removed
 
-# Remove special characters
+# Removing spl characters
 corpus_q3 = "".join([char for char in corpus_q3 if char not in string.punctuation])
 
 # Sentence tokenize the corpus
@@ -120,7 +120,7 @@ print ("\nMost common trigrams: ", str(ngrams_probabilities[3][:10]))
 # Predict next word
 to_predict = "to be"
 
-# Tokenize the sentence
+# Tokenize 
 tokens_of_to_predict = nltk.word_tokenize(to_predict)
 
 ngrams_of_to_predict = {1:[], 2:[]}
